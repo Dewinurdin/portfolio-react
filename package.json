@@ -16,5 +16,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dewinurdin/portfolio-react.git"
+  },
+  "author": "Dewi Nurdin",
+  "license": "MIT"
 }
