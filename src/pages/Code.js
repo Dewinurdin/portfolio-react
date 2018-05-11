@@ -9,7 +9,8 @@ class Code extends Component {
     super(props)
       this.state = {
         giphyBtnClick: false,
-        crystalBtnClick: false
+        crystalBtnClick: false,
+        reactPortBtnClick: false
       }
   }
 
@@ -19,8 +20,13 @@ class Code extends Component {
   }
 
   crystalClick = () => {
-    this.setState({ giphyBtnClick: true })
+    this.setState({ crystalBtnClick: true })
     window.location.href = "https://dewinurdin.github.io/Crystal-Game/index.html";
+  }
+
+  reactPorfolioClick = () => {
+    this.setState({ reactPortBtnClick: true })
+    window.location.href = "https://glacial-chamber-67260.herokuapp.com/";
   }
 
   render() {
@@ -29,6 +35,16 @@ class Code extends Component {
         <div>
           <Grid>
             <Row>
+              <Col xs={6} md={4}>
+                  <Thumbnail src="../../public/favicon.ico" alt="242x200">
+                    <h4>React Portfolio</h4>
+                    <p>
+                      <Button 
+                        onClick={this.reactPorfolioClick}
+                        bsStyle="primary">Button</Button>&nbsp;                   
+                    </p>
+                  </Thumbnail>
+                </Col>
               <Col xs={6} md={4}>
                 <Thumbnail src='https://developers.giphy.com/static/img/api.c99e353f761d.gif' alt="242x200">
                   <h4>AJAX with Giphy API</h4>
@@ -51,16 +67,8 @@ class Code extends Component {
                   </p>
                 </Thumbnail>
               </Col>
-              <Col xs={6} md={4}>
-                <Thumbnail src="/thumbnaildiv.png" alt="242x200">
-                  <h3>Thumbnail label</h3>
-                  <p>Description</p>
-                  <p>
-                    <Button bsStyle="primary">Button</Button>&nbsp;
-                    <Button bsStyle="default">Button</Button>
-                  </p>
-                </Thumbnail>
-              </Col>
+             
+             
             </Row>
           </Grid>
         </div>
