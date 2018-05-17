@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home';
 import Code from './pages/Code';
 import Contact from './pages/Contact';
+import Parallax from './components/Parallax';
 import './App.css';
 
 export const ColorScheme = {
@@ -22,7 +23,7 @@ const AppDiv = styled.div`
   font-size: 1.15em;
 `;
 
-export const CenteredHeader = styled.h4`
+export const CenteredHeader = styled.h2`
   text-align: center;
   margin-bottom: 1.25em;`
 
@@ -44,7 +45,8 @@ class App extends Component {
                   <Switch>
                     <Route exact path='/' component={Home} />        
                     <Route exact path='/code' component={Code} />
-                    <Route exact path='/contact' component={Contact} />        
+                    <Route exact path='/contact' component={Contact} />
+                    <Route exact path='/parallax' component={Parallax} />        
           
                   </Switch>          
               </ContainerDiv>

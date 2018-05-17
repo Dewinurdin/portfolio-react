@@ -38,8 +38,9 @@ class Header extends Component {
         </Link>
             <div>
                 <NavLink to='/'>ABOUT</NavLink>
-                <NavLink to='/code'>PORTFOLIO</NavLink>
+                <NavLink to='/code'>PROJECTS</NavLink>
                 <NavLink to='/contact'>CONTACT</NavLink>
+                {/* <NavLink to='/parallax'>PARALLAX</NavLink> */}
             </div>
             <hr />
        
