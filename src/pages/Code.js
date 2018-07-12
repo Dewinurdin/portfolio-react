@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Row, Col, Thumbnail, Button, Image } from 'react-bootstrap';
-// import { CenteredHeader } from "../App";
 import "../components/stylings/ColorScheme";
-// import GiphyImg from '../assets/Giphy.gif';
 
 class Code extends Component {
   constructor(props) {
@@ -37,8 +35,7 @@ class Code extends Component {
   friendFinderClick = () => {
     this.setState({ reactPortBtnClick: true })
     window.location.href = "https://myfriendsfinder.herokuapp.com/";
-  }
-  
+  }  
 
   render() {
     return (
@@ -47,7 +44,7 @@ class Code extends Component {
           <Grid>
             <Row>
               <Col xs={6} md={4}>
-                <Image src="https://media.giphy.com/media/QkXGUuYckwS9W/giphy.gif" 
+                <Image src={require('../assets/spotify.jpg')} alt='spotify'
                   style={{ height: 200, width: 350 }} 
                   onClick={this.spotifyProjectClick}
                   rounded responsive 
@@ -71,7 +68,7 @@ class Code extends Component {
               </Col>
 
               <Col xs={6} md={4}>
-                <Image src="https://cdn.dribbble.com/users/50064/screenshots/2417760/crystals_high.gif" 
+                <Image src={require('../assets/crystal.jpg')} alt='crystal' 
                   style={{ height: 200, width: 350 }}
                   onClick={this.crystalClick} 
                   rounded responsive 
@@ -79,17 +76,17 @@ class Code extends Component {
                     <h4>Crystal Collector Game</h4>              
               </Col> 
 
-              <Col xs={6} md={4}>
+              {/* <Col xs={6} md={4}>
                 <Image src="https://media.giphy.com/media/xT1R9TaUQfgf5qQZEY/giphy.gif" 
                   style={{ height: 200, width: 350, marginTop: 30 }} 
                   onClick={this.wanderSumClick}
                   rounded responsive 
                   />                  
                     <h4> Wander Sum </h4>                  
-              </Col> 
+              </Col>  */}
 
               <Col xs={6} md={4}>
-                <Image src="https://media.giphy.com/media/Z21HJj2kz9uBG/giphy.gif" 
+                <Image src={require('../assets/friends.jpg')} alt='friends' 
                   style={{ height: 200, width: 350, marginTop: 30 }}
                   onClick={this.crystalClick} 
                   rounded responsive 

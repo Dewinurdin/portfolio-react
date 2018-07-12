@@ -27,20 +27,20 @@ const NavLink = styled(Link)`
   font-size: 16px;
 `
 
-
 class Header extends Component {
   render() {
     return (
       <HeaderDiv>
         <Link to="/">
-          <ProfileImage src={require('../assets/IMG_0360.JPG')} alt='Dewi Nurdin'/>
+          <ProfileImage src={require('../assets/me.jpg')} alt='Dewi Nurdin'/>
           <ProfileTitle>DEWI NURDIN</ProfileTitle>
         </Link>
             <div>
                 <NavLink to='/'>ABOUT</NavLink>
-                <NavLink to='/code'>PROJECTS</NavLink>
+                <NavLink to='/code'>PROJECT DEMOS</NavLink>
+                {/* <NavLink to='/parallax'>CODES</NavLink> */}
                 <NavLink to='/contact'>CONTACT</NavLink>
-                {/* <NavLink to='/parallax'>PARALLAX</NavLink> */}
+                
             </div>
             <hr />
        

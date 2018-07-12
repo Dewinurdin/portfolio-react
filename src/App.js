@@ -33,7 +33,6 @@ const ContainerDiv = styled.div`
   flex: 1;
   font-family: 'Open Sans', sans-serif;
 `
-
 class App extends Component {
 
   render() {
