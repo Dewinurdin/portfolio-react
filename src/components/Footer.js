@@ -22,7 +22,7 @@ const SocialIcon = styled.li`
 
 const FAIcon = styled.i`
   &:hover {
-    color: ${ColorScheme.third}
+    color: ${ColorScheme.third};
     transition: all .3s ease;
     transform: scale(1.1) translateY(-5px);
   }
@@ -44,7 +44,7 @@ class Footer extends Component {
             </div>
             <div className="row" id="copyright" style={{ margin: 0 }}>
               <div className="col-lg-12">
-                <p className="small">© 2018 Dewi Nurdin</p>
+                <p className="small">© 2018 Dewi Nurdin </p>
               </div>
             </div>
       </FooterDiv>
