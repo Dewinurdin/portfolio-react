@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid, Row, Col, Thumbnail, Button, Image } from 'react-bootstrap';
+import { Grid, Row, Col, Image } from 'react-bootstrap';
 import "../components/stylings/ColorScheme";
 
 class Code extends Component {
