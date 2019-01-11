@@ -5,10 +5,16 @@ import styled from 'styled-components';
 import "../components/stylings/ColorScheme";
 
 const Image = styled.img`
-  width: 15em;
-  height: 12em;
+  height: 15em;
   border-radius: 3px;
   width: 90%;
+  margin-top: 1rem;
+  background-color: #ffffff;
+`;
+
+const P = styled.p`
+  font-size: 1.25rem;
+  color: #ffffff;
   margin-top: 1rem;
 `;
 
@@ -16,114 +22,105 @@ class Code extends Component {
   constructor(props) {
     super(props)
       this.state = {
-        giphyBtnClick: false,
-        crystalBtnClick: false,
-        friendFinderBtnClick: false,
-        reactPortBtnClick: false,
-        krhx3BtnClick: false,
-        liquorLandBtnClick: false,
-        fwaMuseumBtnClick: false
+        idSelected: '',
+        fwamImageUrl: process.env.PUBLIC_URL + '/assets/fwamLogo.png',
+        krhx3ImageUrl: process.env.PUBLIC_URL + '/assets/architecture-driveway-home.jpg',
+        liquorLandImageUrl: process.env.PUBLIC_URL + '/assets/wines.jpg',
+        spotifyImageUrl: process.env.PUBLIC_URL + '/assets/spotify.jpg',
+        giphyImageUrl: "https://developers.giphy.com/static/img/api.c99e353f761d.gif",
+        crystalImageUrl: process.env.PUBLIC_URL + '/assets/beads-colorful-colourful.jpg',
+        friendsAppImageUrl: process.env.PUBLIC_URL + '/assets/adorable-animal-blur.jpg'
       }
   }
-  fwaMuseum = () => {
-    this.setState({ fwaMuseumBtnClick: true })
-    window.location.href = "https://www.fortworthaviationmuseum.com";
-  } 
-  krhx3Click = () => {
-    this.setState({ krhx3BtnClick: true })
-    window.location.href = "https://krhx3.com/";
-  }
-  liquorLandClick = () => {
-    this.setState({ liquorLandBtnClick: true })
-    window.location.href = "http://liquorland.us/";
-  }
 
-  giphyClick = () => {
-    this.setState({ giphyBtnClick: true })
-    window.location.href = "https://dewinurdin.github.io/GiphyAPI/GiphyApi.html";
-  }
+  // wanderSumClick = () => {
+  //   this.setState({ reactPortBtnClick: true })
+  //   window.location.href = "https://wander-sum.herokuapp.com/";
+  // }
 
-  crystalClick = () => {
-    this.setState({ crystalBtnClick: true })
-    window.location.href = "https://dewinurdin.github.io/Crystal-Game/index.html";
+  buttonClick = ({ target: { name } }) => {
+    if ( name === 'fwam' ){
+      return window.location.href = "https://www.fortworthaviationmuseum.com";
+    } else if ( name === 'krhx3') {
+      return window.location.href = "https://krhx3.com/";
+    } else if ( name === 'liquorland') {
+      return window.location.href = "http://liquorland.us/";
+    } else if ( name === 'spotify') {
+      return window.location.href = "https://spotify-project.herokuapp.com/";
+    } else if ( name === 'giphy') {
+      return window.location.href = "https://dewinurdin.github.io/GiphyAPI/GiphyApi.html";
+    } else if ( name === 'crystalgame') {
+      return window.location.href = "https://dewinurdin.github.io/Crystal-Game/index.html";
+    } else if ( name === 'friendsFinder') {
+      return window.location.href = "https://myfriendsfinder.herokuapp.com/";
+    }
   }
-
-  spotifyProjectClick = () => {
-    this.setState({ reactPortBtnClick: true })
-    window.location.href = "https://spotify-project.herokuapp.com/";
-  }
-
-  wanderSumClick = () => {
-    this.setState({ reactPortBtnClick: true })
-    window.location.href = "https://wander-sum.herokuapp.com/";
-  }
-
-  friendFinderClick = () => {
-    this.setState({ friendFinderBtnClick: true })
-    window.location.href = "https://myfriendsfinder.herokuapp.com/";
-  }  
-  fwaMuseum = () => {
-    this.setState({ friendFinderBtnClick: true })
-    window.location.href = "https://www.fortworthaviationmuseum.com";
-  } 
 
   render() {
     return (
-      <Container fluid> 
+      <Container fluid style={{ textAlign: 'center' }}> 
         <Row> 
           <Col xs="4"> 
-              <Image src={process.env.PUBLIC_URL + '/assets/fwamLogo.png'} alt='Fort Worth Aviation'
-                onClick={this.fwaMuseum}
+              <Image src={this.state.fwamImageUrl} alt='Fort Worth Aviation'
+                name="fwam"
+                style={{ padding: '2rem' }}
+                onClick={this.buttonClick}                
                 rounded responsive 
                 />                  
-                  <h4><strong>Fort Worth Aviation Museum</strong></h4>                                   
+                  <P style={{color: 'white'}}><strong>Fort Worth Aviation Museum</strong></P>                                   
             </Col>    
             <Col xs="4"> 
-              <Image src={process.env.PUBLIC_URL + '/assets/architecture-driveway-home.jpg'} alt='KRHX3'
-                onClick={this.krhx3Click}
+              <Image src={this.state.krhx3ImageUrl} alt='KRHX3'
+                name="krhx3"
+                onClick={this.buttonClick}
                 rounded responsive 
                 />                  
-                  <h4><strong>KRHX3</strong></h4>                                   
+                  <P><strong>KRHX3</strong></P>                                   
             </Col>
 
             <Col xs="4"> 
-              <Image  src={process.env.PUBLIC_URL + '/assets/wines.jpg'} alt='Liquor Land'
-                onClick={this.liquorLandClick}
+              <Image  src={this.state.liquorLandImageUrl} alt='Liquor Land'
+                name="liquorland"
+                onClick={this.buttonClick}
                 rounded responsive 
                 />                  
-                  <h4><strong>Liquor Land</strong></h4>                                   
+                  <P><strong>Liquor Land</strong></P>                                   
             </Col>
 
             <Col xs="4"> 
-              <Image   src={process.env.PUBLIC_URL + '/assets/spotify.jpg'} alt='spotify'
-                onClick={this.spotifyProjectClick}
+              <Image   src={this.state.spotifyImageUrl} alt='spotify'
+                name="spotify"
+                onClick={this.buttonClick}
                 rounded responsive 
                 />                  
-                  <h4><strong>Spotify Project</strong></h4>                                   
+                  <P><strong>Spotify Project</strong></P>                                   
             </Col>
 
             <Col xs="4">    
-              <Image  src="https://developers.giphy.com/static/img/api.c99e353f761d.gif" alt='giphy ajax'
-                onClick={this.giphyClick}
+              <Image  src={this.state.giphyImageUrl} alt='giphy ajax'
+                name="giphy"
+                onClick={this.buttonClick}
                 rounded responsive 
                 />                 
-                  <h4><strong>AJAX with Giphy API</strong></h4>            
+                  <P><strong>AJAX with Giphy API</strong></P>            
             </Col>
             
             <Col xs="4">
-              <Image  src={process.env.PUBLIC_URL + '/assets/beads-colorful-colourful.jpg'} alt='crystal' 
-                onClick={this.crystalClick} 
+              <Image  src={this.state.crystalImageUrl} alt='Crystal Game' 
+                name="crystalgame"
+                onClick={this.buttonClick} 
                 rounded responsive 
                 />
-                  <h4><strong>Crystal Collector Game</strong></h4>              
+                  <P><strong>Crystal Collector Game</strong></P>              
             </Col> 
 
             <Col xs="4"> 
-              <Image src={process.env.PUBLIC_URL + '/assets/adorable-animal-blur.jpg'} alt='friends' 
-                onClick={this.friendFinderClick} 
+              <Image src={this.state.friendsAppImageUrl} alt='friends' 
+                name="friendsFinder"
+                onClick={this.buttonClick} 
                 rounded responsive 
                 />
-                  <h4><strong>Friend Finder</strong></h4>              
+                  <P><strong>Friend Finder</strong></P>              
             </Col>    
 
             {/* <Col xs={4} md={4}>
@@ -132,7 +129,7 @@ class Code extends Component {
               onClick={this.wanderSumClick}
               rounded responsive 
               />                  
-                <h4> Wander Sum </h4>                  
+                <P> Wander Sum </P>                  
           </Col>  */}       
           
         </Row>

@@ -3,14 +3,15 @@ import styled from 'styled-components';
 import { ColorScheme } from './stylings/ColorScheme.js';
 
 const FooterDiv = styled.div`
-  padding-top: 3rem;
+  padding-top: 0;
   padding-bottom: 0;
-  background-color: ${ColorScheme.mainLight};
+  background-color: #edf8fb;
   text-align: center;
-  height: 150px;
+  height: 22.25rem;
 `;
 
 const SocialIconList = styled.ul`
+  margin-top: 4rem;
   list-style: none;
   padding: 0;
 `;

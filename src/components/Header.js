@@ -33,7 +33,7 @@ class Header extends Component {
       <HeaderDiv>
         <Link to="/"> 
           <ProfileImage src={process.env.PUBLIC_URL + '/assets/me.jpg'} alt='Dewi Nurdin'/>
-          <ProfileTitle>DEWI NURDIN</ProfileTitle>
+          <ProfileTitle>Hi! I'm Dewi Nurdin</ProfileTitle>
         </Link>
             <div>
                 <NavLink to='/'>ABOUT</NavLink>

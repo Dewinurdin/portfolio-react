@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home';
 import Code from './pages/Code';
 import Contact from './pages/Contact';
-import Background from './wall-bg.jpg'
+import Background from './background-blur-clean.jpg'
 
 export const ColorScheme = {
   primary: 'red',
@@ -22,7 +22,7 @@ const AppDiv = styled.div`
   font-size: 1.15em;
 `;
 
-export const CenteredHeader = styled.h2`
+export const CenteredHeader = styled.h3`
   text-align: center;
   margin-bottom: 1.25em;`
 
@@ -40,7 +40,7 @@ class App extends Component {
             <AppDiv 
               className="App"
               style={{backgroundImage: `url(${Background})`,  backgroundRepeat: 'no-repeat',
-              backgroundSize: '130%'
+              backgroundPosition: 'center', width: '1200'
             }}
             >       
               <ContainerDiv>
