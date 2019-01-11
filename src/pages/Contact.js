@@ -1,29 +1,22 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Component } from 'react'
+import { Container } from 'reactstrap'
+import styled from 'styled-components'
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
-import { CenteredHeader } from '../App';
+import { CenteredHeader } from '../App'
 
-const FormDiv = styled.div`
-  margin: 0 auto;
-  width: 50%;
-`
-
-const FormLabel = styled.label`
-  display: block;
-`
-
-const FormInput = styled.input`
-  width: 100%;
-`
-
-const CommentInput = styled.textarea`
-  width: 100%;
-  height: 6em;
-`
+const FormInput = {
+  width: '60%',
+  display: 'block',
+  align: 'center',
+  marginLeft: '20%',
+  textAlign: 'center'
+}
 
 const EmailMe = styled.p`
   text-align: center;
   padding: 4%;
+  font-size: 1.75rem;
 `
 
 const PortButton = styled.a`
@@ -51,32 +44,40 @@ class Contact extends Component {
 
   render() {
     return (
-      <div>
+      <Container style={{ textAlign:'center' }}>
         <CenteredHeader>Get in touch with me!</CenteredHeader>
 
-        <FormDiv>
-          <form action="https://formspree.io/dewinurdin@gmail.com" method="POST" id="contactform">
-            <div>
-              <FormLabel>Name:</FormLabel>
-              <FormInput type="text" name="name" />
-            </div>
-            <div>
-              <FormLabel>Email:</FormLabel>
-              <FormInput type="text" name="email" />
-            </div>
-            <div>
-              <FormLabel>Comment:</FormLabel>
-              <CommentInput name="comment" />
-            </div>
-            <button type="submit">Submit</button>
-          </form>
-        </FormDiv>
+        <Form action="https://formspree.io/dewinurdin@gmail.com" method="POST">
+          <FormGroup>
+            <Label for="name">Name </Label>
+            <Input type="name" name="name" placeholder="Your name" 
+              style={ FormInput}
+            />
+          </FormGroup>
+
+          <FormGroup>
+            <Label for="email">Email </Label>
+            <Input type="email" name="email" placeholder="your-email@email.com" 
+              style={ FormInput}
+            />
+          </FormGroup>
+
+          <FormGroup>
+            <Label for="message">Message</Label>
+            <Input type="textarea" name="message" 
+              style={{ width: '60%', height: '15rem', marginLeft: '20%'}}
+            />
+          </FormGroup>
+
+          <Button>Submit</Button>
+
+        </Form>
 
         <EmailMe>Or, just email me directly at <a href="mailto:dewinurdin@gmail.com" ><strong>dewinurdin@gmail.com</strong></a>.</EmailMe>
 
         <hr/> 
         <CenteredHeader><PortButton href="https://docs.google.com/document/d/1H-za2Nh4uU0sUEgbE4uTF7_9U89CQ6qswVosLbL_3n8/edit?usp=sharing" target="_blank">Download My Resume</PortButton></CenteredHeader>
-      </div>
+      </Container>
     );
   }
 }

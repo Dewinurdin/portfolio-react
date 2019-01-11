@@ -31,8 +31,8 @@ class Header extends Component {
   render() {
     return (
       <HeaderDiv>
-        <Link to="/">
-          <ProfileImage src={require('../assets/me.jpg')} alt='Dewi Nurdin'/>
+        <Link to="/"> 
+          <ProfileImage src={process.env.PUBLIC_URL + '/assets/me.jpg'} alt='Dewi Nurdin'/>
           <ProfileTitle>DEWI NURDIN</ProfileTitle>
         </Link>
             <div>

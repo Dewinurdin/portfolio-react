@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home';
 import Code from './pages/Code';
 import Contact from './pages/Contact';
-import './App.css';
+import Background from './wall-bg.jpg'
 
 export const ColorScheme = {
   primary: 'red',
@@ -37,7 +37,12 @@ class App extends Component {
   render() {
     return (
         <Router>
-            <AppDiv className="App" >       
+            <AppDiv 
+              className="App"
+              style={{backgroundImage: `url(${Background})`,  backgroundRepeat: 'no-repeat',
+              backgroundSize: '130%'
+            }}
+            >       
               <ContainerDiv>
                 <Header />       
                   <Switch>
