@@ -11,7 +11,7 @@ const FooterDiv = styled.div`
 `;
 
 const SocialIconList = styled.ul`
-  margin-top: 4rem;
+  margin-top: 4.5rem;
   list-style: none;
   padding: 0;
 `;
@@ -45,7 +45,7 @@ class Footer extends Component {
             </div>
             <div className="row" id="copyright" style={{ margin: 0 }}>
               <div className="col-lg-12">
-                <p className="small">© 2018 Dewi Nurdin </p>
+                <h5 style={{color: 'black'}}>© 2018 Dewi Nurdin </h5>
               </div>
             </div>
       </FooterDiv>

@@ -39,8 +39,8 @@ class App extends Component {
         <Router>
             <AppDiv 
               className="App"
-              style={{backgroundImage: `url(${Background})`,  backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center', width: '1200'
+              style={{background: `url(${Background})`,  backgroundRepeat: 'no-repeat',
+              width: '1200'
             }}
             >       
               <ContainerDiv>

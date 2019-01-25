@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import Navbar from './Navbar';
 import styled from 'styled-components';
 
 const ProfileImage = styled.img`
@@ -11,13 +10,13 @@ const ProfileImage = styled.img`
 
 const ProfileTitle = styled.h1`
   color: black;
-`
+`;
 
 const HeaderDiv = styled.div`
-  padding-top: 5vh;
   text-align: center;
   font-family: 'Zilla Slab Highlight', sans-serif;
   color: black;
+  background: white;
 `;
 
 const NavLink = styled(Link)`

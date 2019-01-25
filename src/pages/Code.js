@@ -1,22 +1,9 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from 'reactstrap';
-import styled from 'styled-components';
 
 import "../components/stylings/ColorScheme";
+import '../components/stylings/globalStyle'
 
-const Image = styled.img`
-  height: 15em;
-  border-radius: 3px;
-  width: 90%;
-  margin-top: 1rem;
-  background-color: #ffffff;
-`;
-
-const P = styled.p`
-  font-size: 1.25rem;
-  color: #ffffff;
-  margin-top: 1rem;
-`;
 
 class Code extends Component {
   constructor(props) {
@@ -58,69 +45,69 @@ class Code extends Component {
 
   render() {
     return (
-      <Container fluid style={{ textAlign: 'center' }}> 
+      <Container style={{ textAlign: 'center' }}> 
         <Row> 
           <Col xs="4"> 
-              <Image src={this.state.fwamImageUrl} alt='Fort Worth Aviation'
+              <img src={this.state.fwamImageUrl} alt='Fort Worth Aviation'
                 name="fwam"
                 style={{ padding: '2rem' }}
                 onClick={this.buttonClick}                
                 rounded responsive 
                 />                  
-                  <P style={{color: 'white'}}><strong>Fort Worth Aviation Museum</strong></P>                                   
+                  <p style={{color: 'white'}}><strong>Fort Worth Aviation Museum</strong></p>                                   
             </Col>    
             <Col xs="4"> 
-              <Image src={this.state.krhx3ImageUrl} alt='KRHX3'
+              <img src={this.state.krhx3ImageUrl} alt='KRHX3'
                 name="krhx3"
                 onClick={this.buttonClick}
                 rounded responsive 
                 />                  
-                  <P><strong>KRHX3</strong></P>                                   
+                  <p><strong>KRHX3</strong></p>                                   
             </Col>
 
             <Col xs="4"> 
-              <Image  src={this.state.liquorLandImageUrl} alt='Liquor Land'
+              <img  src={this.state.liquorLandImageUrl} alt='Liquor Land'
                 name="liquorland"
                 onClick={this.buttonClick}
                 rounded responsive 
                 />                  
-                  <P><strong>Liquor Land</strong></P>                                   
+                  <p><strong>Liquor Land</strong></p>                                   
             </Col>
 
             <Col xs="4"> 
-              <Image   src={this.state.spotifyImageUrl} alt='spotify'
+              <img   src={this.state.spotifyImageUrl} alt='spotify'
                 name="spotify"
                 onClick={this.buttonClick}
                 rounded responsive 
                 />                  
-                  <P><strong>Spotify Project</strong></P>                                   
+                  <p><strong>Spotify Project</strong></p>                                   
             </Col>
 
             <Col xs="4">    
-              <Image  src={this.state.giphyImageUrl} alt='giphy ajax'
+              <img  src={this.state.giphyImageUrl} alt='giphy ajax'
                 name="giphy"
                 onClick={this.buttonClick}
                 rounded responsive 
                 />                 
-                  <P><strong>AJAX with Giphy API</strong></P>            
+                  <p><strong>AJAX with Giphy API</strong></p>            
             </Col>
             
             <Col xs="4">
-              <Image  src={this.state.crystalImageUrl} alt='Crystal Game' 
+              <img  src={this.state.crystalImageUrl} alt='Crystal Game' 
                 name="crystalgame"
                 onClick={this.buttonClick} 
                 rounded responsive 
                 />
-                  <P><strong>Crystal Collector Game</strong></P>              
+                  <p><strong>Crystal Collector Game</strong></p>              
             </Col> 
 
             <Col xs="4"> 
-              <Image src={this.state.friendsAppImageUrl} alt='friends' 
+              <img src={this.state.friendsAppImageUrl} alt='friends' 
                 name="friendsFinder"
                 onClick={this.buttonClick} 
                 rounded responsive 
                 />
-                  <P><strong>Friend Finder</strong></P>              
+                  <p><strong>Friend Finder</strong></p>              
             </Col>    
 
             {/* <Col xs={4} md={4}>

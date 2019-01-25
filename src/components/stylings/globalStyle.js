@@ -8,14 +8,20 @@ injectGlobal`
     height: 100%;
     margin: 0;
     padding: 0;
-    color: ${ColorScheme.mainText};
-    
+    color: ${ColorScheme.mainText}; 
   }
+
   h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
   }
+  p {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-top: 1rem;
+  }
+
   hr {
-    width: 50%;
+    width: 70%;
   }
   a {
     text-decoration: none;
@@ -29,6 +35,7 @@ injectGlobal`
     &:focus {
       text-decoration: none;
       color: ${ColorScheme.primary};
+      
     }
   }
   input[type=text], textarea {
@@ -54,4 +61,35 @@ injectGlobal`
       border-color: ${ColorScheme.primary};
     }
   }
+  
+  img {
+    height: 12em;
+    border-radius: 3px;
+    width: 90%;
+    margin-top: 1rem;
+    background-color: #ffffff;
+  }
+
+  @media only screen and (max-width: 375px) {
+    img {
+      height: 5rem;
+      width: 7.5rem;
+      border-radius: 3px;
+      margin-top: 1rem;
+      background-color: #ffffff;
+    }
+    p {
+      font-size: 0.65rem;
+      text-align: center;
+      padding-top: .5rem;
+    }
+    
+    h1 {
+      font-size: 1px;
+      color: black;
+    }
+  }
+    
+
+
 `;
